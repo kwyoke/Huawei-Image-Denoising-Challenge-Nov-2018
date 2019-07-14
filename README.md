@@ -8,10 +8,12 @@ We were provided a training dataset containing image pairs of 975 noisy images a
 
 Then, participants had to use their codes to denoise 30 noisy unseen test images (10 from each image class) without having their corresponding clean images, and these denoised images were then submitted onto the competition website. The effectiveness of the algorithm was evaluated using PSNR and SSIM by the organisers.
  
-## Demonstration ##
-The Jupyter notebook demonstrates the opencv2 implementations of Gaussian blurring, Bilateral Filtering and non-local means denoising on a heavily corrupted image as well as a sample from the Huawei competition dataset. (Requires downloading of opencv 3)
-Can run the Matlab code for BM3D using following instructions:
-Can run DnCNN using following instructions:
+## Demo ##
+**Gaussian Blur, Bilateral Filtering, Non-local means denoising:**
+Jupyter notebook demonstrates opencv implementations of these methods using a sample from the huawei competition. (Requires downloading of opencv 3)
+
+**BM3D:**
+In the folder BM3D_COLOR, run the *run.m* file in Matlab, which will denoise the 30 images in the *test* folder provided by huawei and save the outputs in the *output* folder. The matlab code is extracted from http://www.cs.tut.fi/~foi/GCF-BM3D/ 
  
 ## Results ##
 |Submitted test  images| PSNR| SSIM|
@@ -39,8 +41,6 @@ The Gaussian and bilateral filters merely work locally around the neighbourhood 
 ### BM3D (Block-Matching and 3D Filtering): http://www.cs.tut.fi/~foi/GCF-BM3D/ ###
 Similar to non-local means denoising, similar 2D patches are found, but this time grouped together to form 3D arrays called blocks. A special type of filtering called collaborative filtering is then applied to all the 3D blocks, which are then transformed back to the original image. And because the blocks are overlapping, each pixel will have a number of estimates, and aggregation is a special averaging procedure to obtain the denoised pixel value.
 
-### DnCNN: https://github.com/cszn/DnCNN  ###
-Denoising using Convolutional Neural Network
  
 ## Further things to do: ##
 I would try to write out the codes for implementing the simpler techniques myself, such as Bilateral Filtering, non-local means and BM3D. If possible I would want to properly train a CNN to denoise images as well. In general, I do not have a good understanding on the field of digital image denoising and I would like to get a more comprehensive overview, such as the nature of noise and what method is suitable for what kind of noise etc.
