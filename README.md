@@ -39,8 +39,8 @@ The Gaussian and bilateral filters merely work locally around the neighbourhood 
 ### BM3D (Block-Matching and 3D Filtering): http://www.cs.tut.fi/~foi/GCF-BM3D/ ###
 Similar to non-local means denoising, similar 2D patches are found, but this time grouped together to form 3D arrays called blocks. A special type of filtering called collaborative filtering is then applied to all the 3D blocks, which are then transformed back to the original image. And because the blocks are overlapping, each pixel will have a number of estimates, and aggregation is a special averaging procedure to obtain the denoised pixel value.
 
-### DnCNN ###
-Denoising using Convolutional Neural Network: https://github.com/cszn/DnCNN 
+### DnCNN: https://github.com/cszn/DnCNN  ###
+Denoising using Convolutional Neural Network
  
 ## Further things to do: ##
 I would try to write out the codes for implementing the simpler techniques myself, such as Bilateral Filtering, non-local means and BM3D. If possible I would want to properly train a CNN to denoise images as well. In general, I do not have a good understanding on the field of digital image denoising and I would like to get a more comprehensive overview, such as the nature of noise and what method is suitable for what kind of noise etc.
