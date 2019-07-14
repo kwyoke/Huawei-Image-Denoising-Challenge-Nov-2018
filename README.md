@@ -1,12 +1,11 @@
 # Huawei Image Denoising Competition (UK Challenge 1 Nov to 30 Nov 2018) #
 http://eucompetition.huawei.com/uk/ 
- 
-## Competition details ##
-Participants were required to develop an algorithm that reduces image noise whilst preserving image detail. 
 
-We were provided a training dataset containing image pairs of 975 noisy images and their corresponding clean images, which were captured using Huawei P20 smart phones across the image classes ‘buildings’, ‘text’ and ‘foliage’, together with a CSV file providing meta-data for each sample such as the ISO setting. 
-
-Then, participants had to use their codes to denoise 30 noisy unseen test images (10 from each image class) without having their corresponding clean images, and these denoised images were then submitted onto the competition website. The effectiveness of the algorithm was evaluated using PSNR and SSIM by the organisers.
+## Directory structure ##
+1. The zip file *train.zip* contains 975 image pairs of noisy images and their corresponding clean images, which were captured using Huawei P20 smart phones across the image classes ‘buildings’, ‘text’ and ‘foliage’, together with a CSV file providing meta-data for each sample such as the ISO setting. 
+2. The *test* folder contains 30 noisy test images and a csv file detailing their meta-data. These images were provided in the competition to evaluate the effectiveness of the designed algorithm.
+3. Jupyter notebok demonstrates image denoising on the test image and requires *test.png* and *test_clean.png*, both of which originate from the huawei competition.
+4. The folder *BM3D_COLOR* contains Matlab files to run the BM3D denoising algorithm on the 30 test images in the folder *test*
  
 ## Demo ##
 **Gaussian Blur, Bilateral Filtering, Non-local means denoising:**
