@@ -46,4 +46,8 @@ Similar to non-local means denoising, similar 2D patches are found, but this tim
 
  
 ## Further things to do: ##
-I would try to write out the codes for implementing the simpler techniques myself, such as Bilateral Filtering, non-local means and BM3D. If possible I would want to properly train a CNN to denoise images as well. In general, I do not have a good understanding on the field of digital image denoising and I would like to get a more comprehensive overview, such as the nature of noise and what method is suitable for what kind of noise etc.
+I did not make use of the training set at all for training CNNs because the images were too big and my computer GPU couldn't run fast enough. I tried running pretrained weights of trained denoising CNNs such as DnCNN but they didn't work well. Given more time and resources, I would like to train a CNN properly with the given training set.
+
+I would also try to write out the codes for implementing the simpler techniques myself, such as Bilateral Filtering, non-local means and BM3D. 
+
+In general, I do not have a good understanding on the field of digital image denoising and I would like to get a more comprehensive overview, such as the nature of noise and what method is suitable for what kind of noise etc.
