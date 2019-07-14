@@ -15,7 +15,7 @@ Can run DnCNN using following instructions:
  
 ## Results ##
 |Submitted test  images| PSNR| SSIM|
--------------------------------------
+|----------------------|------|---------|
 Original | 38.56| 0.661|
 BM3D denoised| 40.89| 0.651|
  
